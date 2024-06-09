@@ -1,0 +1,7 @@
+site_name: LearnSwift - App
+nav:
+  - Home: index.md
+  - Swift: swift.md
+  - SwiftUI: swiftUI.md
+  - Swift-Quizzes: swiftQuiz.md
+  - SwiftUI-Quizzes: swiftUIQuiz.md
