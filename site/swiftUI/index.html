@@ -91,18 +91,6 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#level-beginner" class="nav-link">Level Beginner</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#level-intermediate" class="nav-link">Level Intermediate</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#level-advanced" class="nav-link">Level Advanced</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -113,7 +101,7 @@
 <h1 id="learn-swiftui">Learn SwiftUI</h1>
 <h2 id="table-of-contents">Table of contents</h2>
 <ol>
-<li><a href="#level-beginner">Beginner</a></li>
+<li><a href="#level-beginner">Beginner</a><ol>
 <li><a href="#module-11-introduction-to-swiftui">Module 11: Introduction to SwiftUI</a><ol>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#declarative-syntax">Declarative Syntax</a></li>
@@ -127,7 +115,9 @@
 <li><a href="#environmentobject">EnvironmentObject</a></li>
 </ol>
 </li>
-<li><a href="#level-intermediate">Intermediate</a></li>
+</ol>
+</li>
+<li><a href="#level-intermediate">Intermediate</a><ol>
 <li><a href="#module-13-components-in-swiftui">Module 13: Components in SwiftUI</a><ol>
 <li><a href="#button-part-i">Button Part I</a></li>
 <li><a href="#button-part-ii">Button Part II</a></li>
@@ -143,19 +133,23 @@
 <li><a href="#tabview">TabView</a></li>
 </ol>
 </li>
-<li><a href="#level-advanced">Advanced</a></li>
+</ol>
+</li>
+<li><a href="#level-advanced">Advanced</a><ol>
 <li><a href="#module-15-advanced-swiftui-lectures">Module 15: Advanced SwiftUI-Lectures</a><ol>
 <li><a href="#rotation-effect">Rotation Effect</a></li>
 <li><a href="#scale-effects">Scale Effects</a></li>
 </ol>
 </li>
 </ol>
-<h2 id="level-beginner">Level Beginner</h2>
-<h3 id="module-11-introduction-to-swiftui">Module 11: Introduction to SwiftUI</h3>
-<h4 id="introduction">Introduction</h4>
+</li>
+</ol>
+<h3 id="level-beginner">Level Beginner</h3>
+<h4 id="module-11-introduction-to-swiftui">Module 11: Introduction to SwiftUI</h4>
+<h5 id="introduction">Introduction</h5>
 <p>SwiftUI helps you build great-looking apps across all Apple platforms with the power of Swift — and surprisingly little code. You can bring even better experiences to everyone, on any Apple device, using just one set of tools and APIs.</p>
 <p><a href="https://developer.apple.com/xcode/swiftui/">SwiftUI Documentation</a></p>
-<h4 id="declarative-syntax">Declarative Syntax</h4>
+<h5 id="declarative-syntax">Declarative Syntax</h5>
 <p>SwiftUI uses a declarative syntax, so you can simply state what your user interface should do. For example, you can write that you want a list of items consisting of text fields, then describe alignment, font, and color for each field. Your code is simpler and easier to read than ever before, saving you time and maintenance.</p>
 <p>The following example displays a Text of "Hello World" with a font size of 32 and color red:</p>
 <pre><code class="language-swift">struct TextView: View {
@@ -167,8 +161,8 @@
 }
 </code></pre>
 <p><a href="https://developer.apple.com/xcode/swiftui/">SwiftUI Documentation</a></p>
-<h3 id="module-12-state-management-in-swiftui">Module 12: State Management in SwiftUI</h3>
-<h4 id="state">State</h4>
+<h4 id="module-12-state-management-in-swiftui">Module 12: State Management in SwiftUI</h4>
+<h5 id="state">State</h5>
 <p>A property wrapper type that can read and write a value managed by SwiftUI.</p>
 <p>Use state as the single source of truth for a given value type that you store in a view hierarchy. Create a state value in a <code>View</code> by applying the <code>@State</code> attribute to a property declaration and providing an initial value. Declare state as private to prevent setting it in a memberwise initializer, which can conflict with the storage management that SwiftUI provides:</p>
 <pre><code class="language-swift">struct PlayButton: View {
@@ -182,7 +176,7 @@
 }
 </code></pre>
 <p><a href="https://developer.apple.com/documentation/swiftui/state">State Documentation</a></p>
-<h4 id="binding">Binding</h4>
+<h5 id="binding">Binding</h5>
 <p>A property wrapper type that can read and write a value owned by a source of truth.</p>
 <p>Use a binding to create a two-way connection between a property that stores data, and a view that displays and changes the data. A binding connects a property to a source of truth stored elsewhere, instead of storing data directly. For example, a button that toggles between play and pause can create a binding to a property of its parent view using the <code>Binding</code> property wrapper.</p>
 <p>The parent view declares a property to hold the playing state, using the <code>State</code> property wrapper to indicate that this property is the value’s source of truth:</p>
@@ -210,7 +204,7 @@ struct PlayerView: View {
 }
 </code></pre>
 <p><a href="https://developer.apple.com/documentation/swiftui/binding">Binding Documentation</a></p>
-<h4 id="stateobject">StateObject</h4>
+<h5 id="stateobject">StateObject</h5>
 <p>A property wrapper type that instantiates an observable object.</p>
 <p>Use a state object as the single source of truth for a reference type that you store in a view hierarchy. Create a state object in a <code>View</code> by applying the <code>@StateObject</code> attribute to a property declaration and providing an initial value that conforms to the <code>ObservableObject</code> protocol. Declare state objects as private to prevent setting them from a memberwise initializer, which can conflict with the storage management that SwiftUI provides.</p>
 <p>In this example, the <code>DataModel</code> class conforms to the <code>ObservableObject</code> protocol and has two published properties: <code>name</code>, a string initialized to "Some Name," and <code>isEnabled</code>, a boolean initialized to <code>false</code>. These properties can be observed for changes in SwiftUI views.</p>
@@ -236,7 +230,7 @@ struct MyView: View {
 }
 </code></pre>
 <p><a href="https://developer.apple.com/documentation/swiftui/stateobject">StateObject Documentation</a></p>
-<h4 id="observedobject">ObservedObject</h4>
+<h5 id="observedobject">ObservedObject</h5>
 <p>A property wrapper type that subscribes to an observable object and invalidates a view whenever the observable object changes.</p>
 <p>Add the <code>@ObservedObject</code> attribute to a parameter of a SwiftUI <code>View</code> when the input is an <code>ObservableObject</code> and you want the view to update when the object’s published properties change. You typically do this to pass a <code>StateObject</code> into a subview.</p>
 <p>The following example defines a data model as an observable object, instantiates the model in a view as a state object, and then passes the instance to a subview as an observed object:</p>
@@ -263,7 +257,7 @@ struct MySubView: View {
 }
 </code></pre>
 <p><a href="https://developer.apple.com/documentation/swiftui/observedobject">ObservedObject Documentation</a></p>
-<h4 id="environmentobject">EnvironmentObject</h4>
+<h5 id="environmentobject">EnvironmentObject</h5>
 <p>A property wrapper type for an observable object that a parent or ancestor view supplies.</p>
 <p>An environment object invalidates the current view whenever the observable object that conforms to <code>ObservableObject</code> changes. If you declare a property as an environment object, be sure to set a corresponding model object on an ancestor view by calling its <code>environmentObject(_:)</code> modifier.</p>
 <p>Here's an example:</p>
@@ -291,9 +285,9 @@ struct MySubView: View {
 }
 </code></pre>
 <p><a href="https://developer.apple.com/documentation/swiftui/environmentobject">EnvironmentObject Documentation</a></p>
-<h2 id="level-intermediate">Level Intermediate</h2>
-<h3 id="module-13-components-in-swiftui">Module 13: Components in SwiftUI</h3>
-<h4 id="button-part-i">Button Part I</h4>
+<h3 id="level-intermediate">Level Intermediate</h3>
+<h4 id="module-13-components-in-swiftui">Module 13: Components in SwiftUI</h4>
+<h5 id="button-part-i">Button Part I</h5>
 <p>You create a button by providing an action and a label. The action is either a method or closure property that does something when a user clicks or taps the button. The label is a view that describes the button’s action — for example, by showing text, an icon, or both.</p>
 <p>The label of a button can be any kind of view, such as a <code>Text</code> view for text-only labels or a <code>Label</code> view, for buttons with both a title and an icon:</p>
 <pre><code class="language-swift">struct ButtonView: View {
@@ -312,7 +306,7 @@ struct MySubView: View {
 }
 </code></pre>
 <p><a href="https://developer.apple.com/documentation/swiftui/button">Button Documentation</a></p>
-<h4 id="button-part-ii">Button Part II</h4>
+<h5 id="button-part-ii">Button Part II</h5>
 <p>You can optionally initialize</p>
 <p>a button with a <code>ButtonRole</code> that characterizes the button’s purpose. For example, you can create a <code>destructive</code> button for a deletion action:</p>
 <pre><code class="language-swift">struct ButtonView: View {
@@ -326,7 +320,7 @@ struct MySubView: View {
 }
 </code></pre>
 <p><a href="https://developer.apple.com/documentation/swiftui/button#Assigning-a-role">Button Documentation</a></p>
-<h4 id="button-part-iii">Button Part III</h4>
+<h5 id="button-part-iii">Button Part III</h5>
 <p>You can customize a button’s appearance using one of the standard button styles, like <code>bordered</code>, and apply the style with the <code>buttonStyle(_:)</code> modifier:</p>
 <pre><code class="language-swift">struct ButtonView: View {
     var body: some View {
@@ -340,7 +334,7 @@ struct MySubView: View {
 }
 </code></pre>
 <p><a href="https://developer.apple.com/documentation/swiftui/button#Styling-buttons">Button Documentation</a></p>
-<h4 id="textfield">TextField</h4>
+<h5 id="textfield">TextField</h5>
 <p>You create a text field with a label and a binding to a value. If the value is a string, the text field updates this value continuously as the user types or otherwise edits the text in the field. For non-string types, it updates the value when the user commits their edits, such as by pressing the Return key.</p>
 <p>The following example shows a text field to accept a username, and a <code>Text</code> view below it that shadows the continuously updated value of username. The <code>Text</code> view changes color as the user begins and ends editing. When the user submits their completed entry to the text field, the <code>onSubmit(of:_:)</code> modifer calls an internal <code>validate(name:)</code> method.</p>
 <pre><code class="language-swift">struct TextFieldView: View {
@@ -364,7 +358,7 @@ struct MySubView: View {
 }
 </code></pre>
 <p><a href="https://developer.apple.com/documentation/swiftui/textfield">TextField Documentation</a></p>
-<h4 id="slider">Slider</h4>
+<h5 id="slider">Slider</h5>
 <p>A control for selecting a value from a bounded linear range of values.</p>
 <p>A slider consists of a “thumb” image that the user moves between two extremes of a linear “track”. The ends of the track represent the minimum and maximum possible values. As the user moves the thumb, the slider updates its bound value.</p>
 <p>The following example shows a slider bound to the value speed. As the slider updates this value, a bound <code>Text</code> view shows the value updating. The <code>onEditingChanged</code> closure passed to the slider receives callbacks when the user drags the slider. The example uses this to change the color of the value text.</p>
@@ -388,7 +382,7 @@ struct MySubView: View {
 }
 </code></pre>
 <p><a href="https://developer.apple.com/documentation/swiftui/slider">Slider Documentation</a></p>
-<h4 id="toggle">Toggle</h4>
+<h5 id="toggle">Toggle</h5>
 <p>A control for selecting a value from a bounded linear range of values.</p>
 <p>You create a toggle by providing an <code>isOn</code> binding and a label. Bind <code>isOn</code> to a Boolean property that determines whether the toggle is on or off. Set the label to a view that visually describes the purpose of switching between toggle states. For example:</p>
 <pre><code class="language-swift">struct SliderView: View {
@@ -402,7 +396,7 @@ struct MySubView: View {
 }
 </code></pre>
 <p><a href="https://developer.apple.com/documentation/swiftui/toggle">Toggle Documentation</a></p>
-<h4 id="system-images">System Images</h4>
+<h5 id="system-images">System Images</h5>
 <p>Symbol images give you a consistent set of icons to use in your app, and ensure that those icons adapt to different sizes and to app-specific content. A symbol image contains a vector-based shape that scales without losing its sharpness. You generate its final appearance by applying a tint color, or if you’re using SF Symbols 2 or later, you can apply multiple colors to add depth and emphasis to your symbol. You use symbol images in places where you display a simple shape or glyph, such as a bar button item.</p>
 <p>In SwiftUI, you use <code>Image(systemName:)</code> to load a system symbol image and <code>Image(_:)</code> to load your custom symbol, as the following code shows:</p>
 <pre><code class="language-swift">struct SystemImagesView: View {
@@ -413,8 +407,8 @@ struct MySubView: View {
 }
 </code></pre>
 <p><a href="https://developer.apple.com/documentation/uikit/uiimage/configuring_and_displaying_symbol_images_in_your_ui">System Images Documentation</a></p>
-<h3 id="module-14-navigation-and-views">Module 14: Navigation and Views</h3>
-<h4 id="navigation">Navigation</h4>
+<h4 id="module-14-navigation-and-views">Module 14: Navigation and Views</h4>
+<h5 id="navigation">Navigation</h5>
 <p>A view that displays a root view and enables you to present additional views over the root view.</p>
 <p>Use a navigation stack to present a stack of views over a root view. People can add views to the top of the stack by clicking or tapping a <code>NavigationLink</code>, and remove views using built-in, platform-appropriate controls, like a Back button or a swipe gesture. The stack always displays the most recently added view that hasn’t been removed, and doesn’t allow the root view to be removed.</p>
 <p>To create navigation links, associate a view with a data type by adding a <code>navigationDestination(for:destination:)</code> modifier inside the stack’s view hierarchy. Then initialize a NavigationLink that presents an instance of the same kind of data.</p>
@@ -435,7 +429,7 @@ struct MySubView: View {
 }
 </code></pre>
 <p><a href="https://developer.apple.com/documentation/swiftui/navigationstack">NavigationStack Documentation</a></p>
-<h4 id="tabview">TabView</h4>
+<h5 id="tabview">TabView</h5>
 <p>To create a user interface with tabs, place views in a TabView and apply the <code>tabItem(_:)</code> modifier to the contents of each tab. On iOS, you can also use one of the badge modifiers, like <code>badge(_:)</code>, to assign a badge to each of the tabs.</p>
 <p>This example defines a view with <code>TabView</code> containing two tabs. The first tab displays "First Tab" with a badge of "2" and an icon of a circle with the number 1. The second tab displays "Second Tab" with a badge of "!" and an icon of a circle with the number 2:</p>
 <pre><code class="language-swift">struct TabViewExample: View {
@@ -458,9 +452,9 @@ struct MySubView: View {
 }
 </code></pre>
 <p><a href="https://developer.apple.com/documentation/swiftui/tabview">TabView Documentation</a></p>
-<h2 id="level-advanced">Level Advanced</h2>
-<h3 id="module-15-advanced-swiftui-lectures">Module 15: Advanced SwiftUI-Lectures</h3>
-<h4 id="rotation-effect">Rotation Effect</h4>
+<h3 id="level-advanced">Level Advanced</h3>
+<h4 id="module-15-advanced-swiftui-lectures">Module 15: Advanced SwiftUI-Lectures</h4>
+<h5 id="rotation-effect">Rotation Effect</h5>
 <p>Rotates a view’s rendered output in two dimensions around the specified point.</p>
 <p>This example defines a view that includes a state variable <code>isRotated</code> initialized to <code>false</code> to control the rotation of an arrow image. The view contains an <code>Image</code> that rotates 90 degrees when <code>isRotated</code> is <code>true</code>, with an ease-in-out animation of 1 second. Tapping the image toggles the rotation state:</p>
 <pre><code class="language-swift">struct BasicAnimationView: View {
@@ -477,7 +471,7 @@ struct MySubView: View {
 }
 </code></pre>
 <p><a href="https://developer.apple.com/documentation/swiftui/view/rotationeffect(_:anchor:)">RotationEffect Documentation</a></p>
-<h4 id="scale-effects">Scale Effects</h4>
+<h5 id="scale-effects">Scale Effects</h5>
 <p>Scales this view’s rendered output by the given vertical and horizontal size amounts, relative to an anchor point.</p>
 <p>This example defines a view that includes a state variable <code>scale</code> initialized to 1.0 to control the scaling of a star image. The view contains a vertically stacked <code>Image</code> with a scaling effect and animation, and a button that increases the scale by 0.5 when tapped, triggering the animation.</p>
 <pre><code class="language-swift">struct AnimationView: View {

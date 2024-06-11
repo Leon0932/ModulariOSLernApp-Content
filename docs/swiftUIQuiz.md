@@ -178,7 +178,7 @@ struct ToggleSwitch: View {
 ##### Quiz 2: Bind a Toggle Button
 
 **Description**: 
-1) Create a `ToggleButton` struct in SwiftUI that toggles between "Start" and "Stop" using a binding variable.
+1) Create a `ToggleButton` struct in SwiftUI that toggles between "Start" and "Stop" using a binding variable.<br>
 2) Then, create a `ControlView` struct that uses `ToggleButton` and binds its `isStarted` state.
 
 **Starting Code**:
@@ -228,16 +228,14 @@ struct ControlView: View {
 ##### Quiz 1: Create a Submit Button
 
 **Description**: 
-1) Create a `SubmitButtonView` struct in SwiftUI that displays a button with the title "Submit".
+1) Create a `SubmitButtonView` struct in SwiftUI that displays a button with the title "Submit".<br>
 2) The button should call a function `submit` when tapped.
 
 **Starting Code**:
 ```swift
 struct SubmitButtonView: View {
     var body: some View {
-        Button(action: submit) {
-            ...
-        }
+        ...
     }
 
     func submit() {
@@ -264,14 +262,14 @@ struct SubmitButtonView: View {
 ##### Quiz 2: Create an Update Button
 
 **Description**: 
-1) Create a `UpdateButtonView` struct in SwiftUI that displays a button with the title "Update" and a prominent role.
+1) Create a `UpdateButtonView` struct in SwiftUI that displays a button with the title "Update" and a prominent role.<br>
 2) The button should call a function `update` when tapped.
 
 **Starting Code**:
 ```swift
 struct UpdateButtonView: View {
     var body: some View {
-        Button("Update", role: .prominent, action: update)
+        ...
     }
 
     func update() {
@@ -296,8 +294,8 @@ struct UpdateButtonView: View {
 ##### Quiz 3: Create an Email TextField
 
 **Description**: 
-1) Create a `EmailTextFieldView` struct in SwiftUI that displays a text field with the placeholder "Email address" for entering an email.
-2) The text field should have a border of a secondary color, disable autocorrection, and use no text input autocapitalization.
+1) Create a `EmailTextFieldView` struct in SwiftUI that displays a text field with the placeholder "Email address" for entering an email.<br>
+2) The text field should have a border of a secondary color, disable autocorrection, and use no text input autocapitalization.<br>
 3) Below the text field, display the entered email in red text.
 
 **Starting Code**:
@@ -336,7 +334,7 @@ struct EmailTextFieldView: View {
 ##### Quiz 4: Create a Volume Slider
 
 **Description**: 
-1) Create a `VolumeSliderView` struct in SwiftUI that displays a slider for selecting a volume value between 0 and 100.
+1) Create a `VolumeSliderView` struct in SwiftUI that displays a slider for selecting a volume value between 0 and 100.<br>
 2) Below the slider, display the selected volume value in green text while editing and gray text otherwise.
 
 **Starting Code**:
@@ -381,7 +379,7 @@ struct VolumeSliderView: View {
 ##### Quiz 1: Create a Food Navigation Stack
 
 **Description**: 
-1) Create a `FoodNavigationView` struct in SwiftUI that displays a list of food items using a `NavigationStack`.
+1) Create a `FoodNavigationView` struct in SwiftUI that displays a list of food items using a `NavigationStack`.<br>
 2) Each food item should be a navigation link that navigates to a new view displaying the selected food name.
 
 **Starting Code**:
@@ -418,8 +416,8 @@ struct FoodNavigationView: View {
 ##### Quiz 2: Create a Category Tab View
 
 **Description**: 
-1) Create a `CategoryTabView` struct in SwiftUI that displays a `TabView` with two tabs.
-2) The first tab should display "Fruits" with a badge of "5" and an icon of an apple. 
+1) Create a `CategoryTabView` struct in SwiftUI that displays a `TabView` with two tabs.<br>
+2) The first tab should display "Fruits" with a badge of "5" and an icon of an apple.<br>
 3) The second tab should display "Vegetables" with a badge of "3" and an icon of a carrot.
 
 **Starting Code**:
