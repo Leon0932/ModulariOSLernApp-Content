@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Swift - LearnSwift - App</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">LearnSwift - App</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Swift</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../swiftUI/" class="nav-link">SwiftUI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../swiftQuiz/" class="nav-link">Swift-Quizzes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../swiftUIQuiz/" class="nav-link">SwiftUI-Quizzes</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../swiftUI/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#learn-swift" class="nav-link">Learn Swift</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#table-of-contents" class="nav-link">Table of contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="learn-swift">Learn Swift</h1>
+<h2 id="table-of-contents">Table of contents</h2>
+<ol>
+<li><a href="#level-beginners">Beginner</a><ol>
+<li><a href="#module-1-introduction-to-swift">Module 1: Introduction to Swift</a><ol>
+<li><a href="#swift-basics">Swift Basics</a></li>
+<li><a href="#comments-in-swift">Comments in Swift</a></li>
+</ol>
+</li>
+<li><a href="#module-2-basic-concepts-in-swift">Module 2: Basic concepts in Swift</a><ol>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#type-annotations">Type Annotations</a></li>
+<li><a href="#integers-and-floating-points">Integers and Floating-Points</a></li>
+<li><a href="#strings-and-characters">Strings and Characters</a></li>
+<li><a href="#booleans">Booleans</a></li>
+<li><a href="#operators">Operators</a></li>
+<li><a href="#enumerations">Enumerations</a></li>
+</ol>
+</li>
+<li><a href="#module-3-control-flows">Module 3: Control Flows</a><ol>
+<li><a href="#conditionals">Conditionals</a></li>
+<li><a href="#loops">Loops</a></li>
+<li><a href="#control-transfers">Control Transfers</a></li>
+</ol>
+</li>
+<li><a href="#module-4-functions">Module 4: Functions</a><ol>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#specify-argument-and-parameters">Specify Argument and Parameters</a></li>
+<li><a href="#function-types">Function Types</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="#level-intermediate">Intermediate</a><ol>
+<li><a href="#module-5-optionals">Module 5: Optionals</a><ol>
+<li><a href="#theory">Theory</a></li>
+<li><a href="#binding">Binding</a></li>
+<li><a href="#chaining">Chaining</a></li>
+<li><a href="#nil-coalescing-operator">Nil-Coalescing Operator</a></li>
+<li><a href="#unconditional-unwrapping">Unconditional Unwrapping</a></li>
+</ol>
+</li>
+<li><a href="#module-6-collection-types">Module 6: Collection Types</a><ol>
+<li><a href="#start">Start</a></li>
+<li><a href="#arrays">Arrays</a></li>
+<li><a href="#sets">Sets</a></li>
+<li><a href="#dictionaries">Dictionaries</a></li>
+</ol>
+</li>
+<li><a href="#module-7-object-oriented-programming">Module 7: Object oriented programming</a><ol>
+<li><a href="#classes-and-structure">Classes and Structure</a></li>
+<li><a href="#declaration">Declaration</a></li>
+<li><a href="#inheritance">Inheritance</a></li>
+<li><a href="#protocols">Protocols</a></li>
+<li><a href="#extensions">Extensions</a></li>
+</ol>
+</li>
+<li><a href="#module-8-error-handling">Module 8: Error Handling</a><ol>
+<li><a href="#start">Start</a></li>
+<li><a href="#representing-throwing-errors">Representing / Throwing Errors</a></li>
+<li><a href="#handling-errors">Handling Errors</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="#level-advanced">Advanced</a><ol>
+<li><a href="#module-9-functional-programming">Module 9: Functional Programming</a><ol>
+<li><a href="#closures">Closures</a></li>
+<li><a href="#generics">Generics</a></li>
+</ol>
+</li>
+<li><a href="#module-10-advanced-swift-lectures">Module 10: Advanced Swift-Lectures</a><ol>
+<li><a href="#property-observers">Property Observers</a></li>
+<li><a href="#type-casting">Type Casting</a></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="level-beginners">Level Beginners</h3>
+<h4 id="module-1-introduction-to-swift">Module 1: Introduction to Swift</h4>
+<h5 id="swift-basics">Swift Basics</h5>
+<p>A variable can be created using the keyword <code>var</code>. Constants can be created using <code>let</code>. To print the value out, use the function <code>print()</code>.</p>
+<p>Unlike other languages like C or C++, you don't need to specify the data type. The compiler recognizes the data types automatically. In the next module, you will learn about different data types.</p>
+<pre><code class="language-swift">var variable1 = 0
+let constant = 1
+
+print(variable1)
+print(constant)
+
+variable1 = 5
+print(variable1)
+
+// Compiler-Error
+// constant = 10
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html">Swift Documentation: The Basics</a></p>
+<h5 id="comments-in-swift">Comments in Swift</h5>
+<p>Use comments to include nonexecutable text in your code, as a note or reminder to yourself. Comments are ignored by the Swift compiler when your code is compiled.</p>
+<p>Comments in Swift are very similar to comments in C. Single-line comments begin with two forward-slashes (<code>//</code>).</p>
+<p>Multiline comments start with a forward-slash followed by an asterisk (<code>/*</code>) and end with an asterisk followed by a forward-slash (<code>*/</code>):</p>
+<pre><code class="language-swift">// This is a comment
+
+/* This is also a comment
+but is written over multiple lines. */
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID315">Swift Documentation: Comments</a></p>
+<h4 id="module-2-basic-concepts-in-swift">Module 2: Basic concepts in Swift</h4>
+<h5 id="introduction">Introduction</h5>
+<p>Constants and variables must be declared before they’re used. You declare constants with the <code>let</code> keyword and variables with the <code>var</code> keyword.</p>
+<p>Here’s an example of how constants and variables can be used to track the number of login attempts a user has made. The result will get with <code>print</code> printed out. Use String Interpolation (<code>\( )</code>) to print out the variable in a <code>String</code>.</p>
+<pre><code class="language-swift">let maximumNumberOfLoginAttempts = 10
+var currentLoginAttempt = 0
+
+print(&quot;The maximum number of login attempts is \(maximumNumberOfLoginAttempts)&quot;)
+print(&quot;The current number of login attempts is \(currentLoginAttempt)&quot;)
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/thebasics#Declaring-Constants-and-Variables">Swift Documentation: Declaring Constants and Variables</a></p>
+<h5 id="type-annotations">Type Annotations</h5>
+<p>You can provide a <code>type annotation</code> when you declare a constant or variable, to be clear about the kind of values the constant or variable can store. 
+Write a type annotation by placing a colon after the constant or variable name, followed by a space, followed by the name of the type to use.</p>
+<p>This example provides a type annotation for a variable called <code>welcomeMessage</code>, to indicate that the variable can store String values:</p>
+<pre><code class="language-swift">var welcomeMessage: String
+
+// The welcomeMessage variable can now be set to any string value without error:
+welcomeMessage = &quot;Hello&quot;
+print(welcomeMessage)
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/thebasics/#Type-Annotations">Swift Documentation: Type Annotations</a></p>
+<h5 id="integers-and-floating-points">Integers and Floating-Points</h5>
+<p><em>Integers</em> are whole numbers with no fractional component, such as 42 and -23. Integers are either signed (positive, zero, or negative) or unsigned (positive or zero).</p>
+<p><em>Floating-point</em> numbers are numbers with a fractional component, such as 3.14159, 0.1, and -273.15. Floating-point types can represent a much wider range of values than integer types, and can store numbers that are much larger or smaller than can be stored in an Int. Swift provides two signed floating-point number types:</p>
+<ul>
+<li>Double represents a 64-bit floating-point number.</li>
+<li>Float represents a 32-bit floating-point number.</li>
+</ul>
+<p>Double has a precision of at least 15 decimal digits, whereas the precision of <code>Float</code> can be as little as 6 decimal digits. The appropriate
+floating-point type to use depends on the nature and range of values you need to work with in your code.</p>
+<p>In situations where either type would be appropriate, <code>Double</code> is preferred.</p>
+<pre><code class="language-swift">let age = 12 // int
+let note = 1.7 // double
+print(age)
+print(note)
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/thebasics#Int">Swift Documentation: Int</a></p>
+<h5 id="strings-and-characters">Strings and Characters</h5>
+<p>A <em>string</em> is a series of characters, such as "hello, world" or "albatross". Swift strings are represented by the <code>String</code> type. The contents of a <code>String</code> can be accessed in various ways, including as a collection of <code>Character</code> values.</p>
+<p>You can include predefined <code>String</code> values within your code as string literals. A string literal is a sequence of characters surrounded by double quotation marks ("").</p>
+<p>Use a string literal as an initial value for a constant or variable:</p>
+<pre><code class="language-swift">let someString = &quot;Some string literal value&quot;
+print(someString)
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/stringsandcharacters#String-Literals">Swift Documentation: String Literals</a></p>
+<h5 id="booleans">Booleans</h5>
+<p>Swift has a basic Boolean type, called <code>Bool</code>. Boolean values are referred to as logical, because they can only ever be <code>true</code> or <code>false</code>.</p>
+<pre><code class="language-swift">let orangesAreOrange = true
+let turnipsAreDelicious = false
+print(orangesAreOrange)
+print(turnipsAreDelicious)
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/thebasics#Booleans">Swift Documentation: Booleans</a></p>
+<h5 id="operators">Operators</h5>
+<p>Operators are unary, binary, or ternary:</p>
+<ul>
+<li>Unary operators operate on a single target (such as <code>-a</code>). Unary prefix operators appear immediately before their target (such as <code>!b</code>), and unary postfix operators appear immediately after their target (such as <code>c!</code>).</li>
+<li>Binary operators operate on two targets (such as `2 +</li>
+</ul>
+<p>3<code>) and are infix because they appear in between their two targets.
+- Ternary operators operate on three targets. Like C, Swift has only one ternary operator, the ternary conditional operator (</code>a ? b : c`).</p>
+<p>The values that operators affect are operands. In the expression <code>1 + 2</code>, the + symbol is an infix operator and its two operands are the values 1 and 2.</p>
+<pre><code class="language-swift">// Unary Operators: -a
+// Binary Operators: 2 + 3
+// Ternary Operators: a ? b : c
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/basicoperators#Terminology">Swift Documentation: Terminology</a></p>
+<h5 id="enumerations">Enumerations</h5>
+<p><em>Enumerations</em> (or <code>enums</code>) in Swift are a powerful feature that allows you to define a common type for a group of related values and work with those values in a type-safe way. Swift enumerations are more flexible than their counterparts in many other languages. They can have associated values and methods.</p>
+<pre><code class="language-swift">enum CompassPoint {
+    case north
+    case south
+    case east
+    case west
+}
+
+// or
+enum CompassPointVariant2 {
+    case north, south, east, west
+}
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/enumerations#Enumeration-Syntax">Swift Documentation: Enumeration Syntax</a></p>
+<h4 id="module-3-control-flows">Module 3: Control Flows</h4>
+<h5 id="conditionals">Conditionals</h5>
+<p>It’s often useful to execute different pieces of code based on certain conditions. You might want to run an extra piece of code when an error occurs, or to display a message when a value becomes too high or too low. To do this, you make parts of your code conditional.</p>
+<p>Swift provides two ways to add conditional branches to your code: the <code>if</code> statement and the <code>switch</code> statement. Typically, you use the if statement to evaluate simple conditions with only a few possible outcomes. The switch statement is better suited to more complex conditions with multiple possible permutations and is useful in situations where pattern matching can help select an appropriate code branch to execute.</p>
+<pre><code class="language-swift">if &lt;statement&gt; {
+    // do something
+}
+
+switch &lt;some value&gt; {
+    case &lt;Nr. 1&gt;:
+        // do something
+    case &lt;Nr. 2&gt;:
+        // do something
+    default:
+        // do something
+}
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/controlflow">Swift Documentation: Control Flow</a></p>
+<h5 id="loops">Loops</h5>
+<p>You use the <code>for-in</code> loop to iterate over a sequence, such as items in an array, ranges of numbers, or characters in a string.</p>
+<p>Here are some examples:</p>
+<pre><code class="language-swift">// Iterate over the items in an array
+let names = [&quot;Anna&quot;, &quot;Alex&quot;, &quot;Brian&quot;, &quot;Jack&quot;]
+for name in names {
+    print(&quot;Hello, \(name)!&quot;)
+}
+
+// Iterate over a range of numbers from 1 to 5
+for index in 1...5 {
+    print(&quot;\(index)! times 5 is \(index * 5)!&quot;)
+}
+
+// the half-open range operator (..&lt;) includes the
+// lower bound but not the upper bound.
+// 1..&lt;6 is equal to 1...5
+
+// If you don’t need each value from a sequence,
+// you can ignore the values by using an underscore
+// in place of a variable name.
+for _ in 1...5 {
+    print(&quot;Loops are cool&quot;)
+}
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/controlflow#For-In-Loops">Swift Documentation: For-In Loops</a></p>
+<h5 id="control-transfers">Control Transfers</h5>
+<p><em>Control transfer statements</em> change the order in which your code is executed, by transferring control from one piece of code to another. Swift has five control transfer statements:</p>
+<ul>
+<li><code>continue</code></li>
+<li><code>break</code></li>
+<li><code>fallthrough</code></li>
+<li><code>return</code></li>
+<li><code>throw</code></li>
+</ul>
+<p>The <code>continue</code>, <code>break</code>, and <code>fallthrough</code> statements are described below. The <code>return</code> statement is described in <strong>Module: Functions</strong>, and the <code>throw</code> statement is described in <strong>Module: Error Handling</strong>.</p>
+<pre><code class="language-swift">for number in 1...10 {
+    if number % 2 == 0 {
+        continue
+    }
+    print(number)
+}
+
+for number in 1...10 {
+    if number == 5 {
+        break
+    }
+    print(number)
+}
+
+let number = 3
+
+switch number {
+case 1:
+    print(&quot;The number is 1&quot;)
+case 2:
+    print(&quot;The number is 2&quot;)
+case 3:
+    print(&quot;The number is 3&quot;)
+    fallthrough // Continue to the next case
+case 4:
+    print(&quot;The number is 4&quot;)
+    fallthrough // Continue to the next case
+case 5:
+    print(&quot;The number is 5&quot;)
+default:
+    print(&quot;The number is something else&quot;)
+}
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/controlflow#Control-Transfer-Statements">Swift Documentation: Control Transfer Statements</a></p>
+<h4 id="module-4-functions">Module 4: Functions</h4>
+<h5 id="introduction_1">Introduction</h5>
+<p>When defining a <em>function</em>, you can optionally define named, typed input values called <code>parameters</code>, and a type for the output value, known as the <code>return</code> type. Every function has a name describing its task. To use a function, you "call" it with its name and provide input values, or arguments, matching the function’s parameters in the specified order.</p>
+<p>To demonstrate this, there are two functions:</p>
+<ul>
+<li>The function <code>greet(person:)</code>, takes a person’s name as input and returns a greeting. It defines one input parameter—a String called person—and a return type of String for the greeting.</li>
+<li>The function <code>helloWorld()</code> takes no parameters and returns nothing; it only prints "Hello World".</li>
+</ul>
+<pre><code class="language-swift">func greet(person: String) -&gt; String {
+    let greeting = &quot;Hello, &quot; + person + &quot;!&quot;
+    return greeting
+}
+
+func helloWorld() {
+    print(&quot;Hello World&quot;)
+}
+
+print(greet(person: &quot;Anna&quot;))
+print(greet(person: &quot;Brian&quot;))
+
+helloWorld()
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/functions#Defining-and-Calling-Functions">Swift Documentation: Defining and Calling Functions</a></p>
+<h5 id="specify-argument-and-parameters">Specify Argument and Parameters</h5>
+<p>Each function parameter has both an <em>argument label</em> and a <em>parameter name</em>. The argument label is used when calling the function; each argument is written in the function call with its argument label before it. The parameter name is used in the implementation of the function. By default, parameters use their parameter name as their argument label.</p>
+<p>You can specify an argument label before the parameter name, separated by a space.
+Here’s a variation of the <code>greet(person:)</code> function that takes a person’s name and hometown and returns a greeting:</p>
+<pre><code class="language-swift">func greet(person: String, from hometown: String) -&gt; String {
+    return &quot;Hello \(person)!  Glad you could visit from \(hometown).&quot;
+}
+
+print(greet(person: &quot;Bill&quot;, from: &quot;Cupertino&quot;))
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/functions#Function-Argument-Labels-and-Parameter-Names">Swift Documentation: Function Argument Labels and Parameter Names</a></p>
+<h5 id="function-types">Function Types</h5>
+<p>Every function has a specific <em>function type</em>, made up of the parameter types and the return type of the function.</p>
+<p>For example:</p>
+<pre><code class="language-swift">func addTwoInts(_ a: Int, _ b: Int) -&gt; Int {
+    return a + b
+}
+
+func multiplyTwoInts(_ a: Int, _ b: Int) -&gt; Int {
+    return a * b
+}
+
+func printHelloWorld() {
+    print(&quot;hello, world&quot;)
+}
+</code></pre>
+<p>The type of both of these functions is:</p>
+<pre><code class="language-swift">(Int, Int) -&gt; Int
+</code></pre>
+<p>This can be read as: “A function that has two parameters, both of type Int, and that returns a value of type Int.”</p>
+<p>Here’s another example, for a function with no parameters or return value:</p>
+<pre><code class="language-swift">func printHelloWorld() { print(&quot;hello, world&quot;) }
+</code></pre>
+<p>The type of this function is <code>() -&gt; Void</code>, or “a function that has no parameters, and returns Void.”</p>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/functions#Function-Types">Swift Documentation: Function Types</a></p>
+<h3 id="level-intermediate">Level Intermediate</h3>
+<h4 id="module-5-optionals">Module 5: Optionals</h4>
+<h5 id="theory">Theory</h5>
+<p>Optionals are a fundamental feature in Swift. They allow you to declare variables or constants that can either hold a value or be <code>nil</code> (no value).</p>
+<p>Swift’s type system usually shows the wrapped type’s name with a trailing question mark (?) instead of showing the full type name. For example, if a variable has the type <code>Int?</code>, that’s just another way of writing <code>Optional&lt;Int&gt;</code>.</p>
+<pre><code class="language-swift">var ageShort: Int?
+var ageLong: Optional&lt;Int&gt;
+</code></pre>
+<p><a href="https://developer.apple.com/documentation/swift/optional#overview">Apple Documentation: Optional</a></p>
+<h5 id="binding">Binding</h5>
+<p>To conditionally bind the wrapped value of an Optional instance to a new variable, use one of the optional binding control structures, including <code>if let</code>, <code>guard let</code>, and <code>switch</code>.</p>
+<p>Here are some examples:</p>
+<pre><code class="language-swift">var age: Int? = nil
+
+if let unwrappedAge = age {
+    print(unwrappedAge)
+} else {
+    print(&quot;Age is nil&quot;)
+}
+
+var name: String? = &quot;Max&quot;
+guard let unwrappedName = name else { 
+    print(&quot;Name is nil&quot;)
+    return
+}
+
+print(unwrappedName)
+</code></pre>
+<p><a href="https://developer.apple.com/documentation/swift/optional#Optional-Binding">Apple Documentation: Optional Binding</a></p>
+<h5 id="chaining">Chaining</h5>
+<p>To safely access the properties and methods of a wrapped instance, use the postfix optional chaining</p>
+<p>operator (postfix <code>?</code>).</p>
+<p>Here is an example
+(You will learn classes in the <strong>Module 7: Object Oriented Programming</strong>):</p>
+<pre><code class="language-swift">class Person {
+    var residence: Residence?
+}
+
+class Residence {
+    var numberOfRooms = 1
+}
+
+let john = Person()
+if let roomCount = john.residence?.numberOfRooms {
+    print(&quot;John's residence has \(roomCount) room(s).&quot;)
+} else {
+    print(&quot;Unable to retrieve the number of rooms.&quot;)
+}
+</code></pre>
+<p><a href="https://developer.apple.com/documentation/swift/optional#Optional-Chaining">Apple Documentation: Optional Chaining</a></p>
+<h5 id="nil-coalescing-operator">Nil-Coalescing Operator</h5>
+<p>Use the nil-coalescing operator (??) to supply a default value in case the <code>Optional</code> instance is <code>nil</code>.</p>
+<p>Here is a simple example:</p>
+<pre><code class="language-swift">var optionalCar: String? = &quot;BMW&quot;
+print(optionalCar ?? &quot;There is no car&quot;)
+</code></pre>
+<p><a href="https://developer.apple.com/documentation/swift/optional#Using-the-Nil-Coalescing-Operator">Apple Documentation: Nil-Coalescing Operator</a></p>
+<h5 id="unconditional-unwrapping">Unconditional Unwrapping</h5>
+<p>When you’re certain that an instance of Optional contains a value, you can unconditionally unwrap the value by using the forced unwrap operator (postfix !).
+Note: Unconditionally unwrapping a nil instance with <code>!</code> triggers a runtime error.</p>
+<p>Here is a simple example:</p>
+<pre><code class="language-swift">var optionalCar: String? = &quot;BMW&quot;
+print(optionalCar!)
+
+// This code will
+// crash the App
+// var crashVariable: String? = nil
+// print(crashVariable!)
+</code></pre>
+<p><a href="https://developer.apple.com/documentation/swift/optional#Unconditional-Unwrapping">Apple Documentation: Unconditional Unwrapping</a></p>
+<h4 id="module-6-collection-types">Module 6: Collection Types</h4>
+<h5 id="start">Start</h5>
+<p>Swift provides three primary <em>collection types</em>, known as arrays, sets, and dictionaries, for storing collections of values.
+Arrays are ordered collections of values. Sets are unordered collections of unique values. Dictionaries are unordered collections of key-value associations.</p>
+<p>Arrays, sets, and dictionaries in Swift are always clear about the types of values and keys that they can store. This means that you can’t insert a value of the wrong type into a collection by mistake. It also means you can be confident about the type of values you will retrieve from a collection.</p>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/collectiontypes">Swift Documentation: Collection Types</a></p>
+<h5 id="arrays">Arrays</h5>
+<p>An <em>array</em> stores values of the same type in an ordered list. The same value can appear in an array multiple times at different positions.</p>
+<p>You can create an empty array of a certain type using initializer syntax.
+Swift’s Array type also provides an initializer for creating an array of a certain size with all of its values set to the same default value. You pass this initializer a default value of the appropriate type (called <code>repeating</code>): and the number of times that value is repeated in the new array (called <code>count</code>):</p>
+<pre><code class="language-swift">var arrayOfInts: [Int] = []
+var arrayOfDoubles: [Double] = Array(repeating: 0.0, count: 3)
+
+print(arrayOfInts)
+print(arrayOfDoubles)
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/collectiontypes#Arrays">Swift Documentation: Arrays</a></p>
+<p>You access and modify an array through its methods and properties, or by using subscript syntax.</p>
+<p>Here are some examples:</p>
+<pre><code class="language-swift">var shoppingList = [&quot;Eggs&quot;, &quot;Toast&quot;, &quot;Cornflakes&quot;]
+print(&quot;The shopping list contains \(shoppingList.count) items.&quot;)
+
+if shoppingList.isEmpty {
+    print(&quot;The shopping list is empty.&quot;)
+} else {
+    print(&quot;The shopping list isn't empty.&quot;)
+}
+
+// Add
+shoppingList.append(&quot;Flour&quot;)
+shoppingList += [&quot;Baking Powder&quot;]
+print(&quot;The shopping list contains \(shoppingList)&quot;)
+
+// Access
+print(&quot;The first item of the shopping list is: \(shoppingList[0])&quot;)
+
+// Modify
+shoppingList[0] = &quot;Six eggs&quot;
+print(&quot;The first item of the shopping list is: \(shoppingList[0])&quot;)
+
+// Remove
+let cornflakes = shoppingList.remove(at: 2)
+let bakingPowder = shoppingList.removeLast()
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/collectiontypes#Accessing-and-Modifying-an-Array">Swift Documentation: Accessing and Modifying an Array</a></p>
+<p>You can iterate over the entire set of values in an array with the <code>for-in</code> loop:</p>
+<pre><code class="language-swift">var shoppingList = [&quot;Eggs&quot;, &quot;Toast&quot;, &quot;Cornflakes&quot;]
+
+for item in shoppingList {
+    print(item)
+}
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/collectiontypes#Iterating-Over-an-Array">Swift Documentation: Iterating Over an Array</a></p>
+<h5 id="sets">Sets</h5>
+<p>A <em>set</em> stores distinct values of the same type in a collection with no defined ordering. You can use a set instead of an array when the order of items isn’t important, or when you need to ensure that an item only appears once.</p>
+<p>You can create an empty set of a certain type using initializer syntax:</p>
+<pre><code class="language-swift">var letters = Set&lt;Character&gt;()
+print(&quot;letters is of type Set&lt;Character&gt; with \(letters.count) items.&quot;)
+
+// Initialize a set with an array literal
+var favoriteGenres: Set&lt;String&gt; = [&quot;Rock&quot;, &quot;Classical&quot;, &quot;Hip hop&quot;]
+print(favoriteGenres)
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/collectiontypes#Sets">Swift Documentation: Sets</a></p>
+<p>You access and modify a <code>set</code> through its methods and properties.</p>
+<p>Here are some examples:</p>
+<pre><code class="language-swift">var favoriteGenres: Set&lt;String&gt; = [&quot;Rock&quot;, &quot;Classical&quot;, &quot;Hip hop&quot;]
+
+if favoriteGenres.isEmpty {
+    print(&quot;As far as music goes, I'm not picky.&quot;)
+} else {
+    print(&quot;I have particular music preferences.&quot;)
+}
+
+favoriteGenres.insert(&quot;Jazz&quot;)
+print(favoriteGenres)
+
+if let removedGenre = favoriteGenres.remove(&quot;Rock&quot;) {
+    print(&quot;\(removedGenre)? I'm over it.&quot;)
+} else {
+    print(&quot;I never much cared for that.&quot;)
+}
+
+if favoriteGenres.contains(&quot;Funk&quot;) {
+    print(&quot;I get up on the good foot.&quot;)
+} else {
+    print(&quot;It's too funky in here.&quot;)
+}
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/collectiontypes#Accessing-and-Modifying-a-Set">Swift Documentation: Accessing and Modifying a Set</a></p>
+<p>You can iterate over the values in a set with a <code>for-in</code> loop.</p>
+<pre><code class="language-swift">var favoriteGenres: Set&lt;String&gt; = [&quot;Rock&quot;, &quot;Classical&quot;, &quot;Hip hop&quot;]
+
+for genre in favoriteGenres {
+    print(&quot;\(genre)&quot;)
+}
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/collectiontypes#Iterating-Over-a-Set">Swift Documentation: Iterating Over a Set</a></p>
+<p>You can efficiently perform fundamental set operations, such as combining two sets together, determining which values two sets have in common, or determining whether two sets contain all, some, or none of the same values.</p>
+<ul>
+<li>Use the <code>intersection(_:)</code> method to create a new set with only the values common to both sets.</li>
+<li>Use the <code>symmetricDifference(_:)</code> method to create a new set with values in either set, but not both.</li>
+<li>Use the <code>union(_:)</code> method to create a new set with all of the values in both sets.</li>
+<li>Use the <code>subtracting(_:)</code> method to create a new set with values not in the specified set.</li>
+</ul>
+<p>Here's an example:</p>
+<pre><code class="language-swift">let oddDigits: Set = [1, 3, 5, 7, 9]
+let evenDigits: Set = [0, 2, 4, 6, 8]
+let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
+
+let unionDigits = oddDigits
+.union(evenDigits)
+.sorted()
+print(unionDigits)
+
+let intersectionDigits = oddDigits
+.intersection(evenDigits)
+.sorted()
+print(intersectionDigits)
+
+let subtractingDigits = oddDigits
+.subtracting(singleDigitPrimeNumbers)
+.sorted()
+print(subtractingDigits)
+
+let symmetricDifferenceDigits = oddDigits
+.symmetricDifference(singleDigitPrimeNumbers)
+.sorted()
+print(symmetricDifferenceDigits)
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/collectiontypes#Performing-Set-Operations">Swift Documentation: Performing Set Operations</a></p>
+<h5 id="dictionaries">Dictionaries</h5>
+<p>A <em>dictionary</em> stores associations between keys of the same type and values of the same type in a collection with no defined ordering. Each value is associated with a <em>unique key</em>, which acts as an identifier for that value within the dictionary. Unlike items in an array, items in a dictionary don’t have a specified order. You use a dictionary when you need to look up values based on their identifier, in much the same way that a real-world dictionary is used to look up the definition for a particular word.</p>
+<p>As with arrays, you can create an empty Dictionary of a certain type by using initializer syntax:</p>
+<pre><code class="language-swift">var namesOfIntegers: [Int: String] = [:]
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/collectiontypes#Dictionaries">Swift Documentation: Dictionaries</a></p>
+<p>You access and modify a dictionary through its methods and properties, or by using subscript syntax.</p>
+<p>Here are some examples:</p>
+<pre><code class="language-swift">var airports = [&quot;YYZ&quot;: &quot;Toronto Pearson&quot;, &quot;DUB&quot;: &quot;Dublin&quot;]
+print(&quot;The airports dictionary contains \(airports.count) items.&quot;)
+
+if airports.isEmpty {
+    print(&quot;The airports dictionary is empty.&quot;)
+} else {
+    print(&quot;The airports dictionary isn't empty.&quot;)
+}
+
+//
+
+ Add
+airports[&quot;LHR&quot;] = &quot;London&quot;
+
+// Update
+if let oldValue = airports.updateValue(&quot;Dublin Airport&quot;, forKey: &quot;DUB&quot;) {
+    print(&quot;The old value for DUB was \(oldValue).&quot;)
+}
+
+// Access
+if let airportName = airports[&quot;DUB&quot;] {
+    print(&quot;The name of the airport is \(airportName).&quot;)
+} else {
+    print(&quot;That airport isn't in the airports dictionary.&quot;)
+}
+
+// Remove
+airports[&quot;APL&quot;] = &quot;Apple International&quot;
+// &quot;Apple International&quot; isn't the real airport for APL, so delete it
+airports[&quot;APL&quot;] = nil
+
+if let removedValue = airports.removeValue(forKey: &quot;DUB&quot;) {
+    print(&quot;The removed airport's name is \(removedValue).&quot;)
+} else {
+    print(&quot;The airports dictionary doesn't contain a value for DUB.&quot;)
+}
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/collectiontypes#Accessing-and-Modifying-a-Dictionary">Swift Documentation: Accessing and Modifying a Dictionary</a></p>
+<p>You can iterate over the key-value pairs in a dictionary with a <code>for-in</code> loop. Each item in the dictionary is returned as a <code>(key, value)</code> tuple, and you can decompose the tuple’s members into temporary constants or variables as part of the iteration:</p>
+<pre><code class="language-swift">var airports = [&quot;YYZ&quot;: &quot;Toronto Pearson&quot;, &quot;DUB&quot;: &quot;Dublin&quot;]
+
+for (airportCode, airportName) in airports {
+    print(&quot;\(airportCode): \(airportName)&quot;)
+}
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/collectiontypes#Iterating-Over-a-Dictionary">Swift Documentation: Iterating Over a Dictionary</a></p>
+<h4 id="module-7-object-oriented-programming">Module 7: Object oriented programming</h4>
+<h5 id="classes-and-structure">Classes and Structure</h5>
+<p>In Swift, classes and structures are versatile and flexible constructs that can be used to build your program’s code. Both classes and structures can:</p>
+<ul>
+<li>Define properties to store values.</li>
+<li>Define methods to provide functionality.</li>
+<li>Define subscripts to provide access to their values using subscript syntax.</li>
+<li>Define initializers to set up their initial state.</li>
+<li>Be extended to expand their functionality beyond a default implementation.</li>
+<li>Conform to protocols to provide standard functionality of a certain kind.</li>
+</ul>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/classesandstructures">Swift Documentation: Classes and Structures</a></p>
+<p>There are also significant differences between classes and structures in Swift:</p>
+<p>Classes:
+1. Inheritance: Classes can inherit from other classes. This means a class can gain the characteristics of another class.
+2. Type Casting: You can check and interpret the type of a class instance at runtime.
+3. Deinitializers: Classes can define deinitializers, which allow an instance of a class to free up any resources it has assigned.
+4. Reference Counting: Classes are reference types and are managed by automatic reference counting (ARC).</p>
+<p>Structures:
+1. No Inheritance: Structures do not support inheritance. They cannot inherit from other structures.
+2. Value Types: Structures are value types. When you assign or pass around a structure, you are making a copy of it.
+3. Mutability: To modify a property of a structure, you must mark it as mutating if it changes any properties of the structure within its methods.</p>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/classesandstructures#Comparing-Structures-and-Classes">Swift Documentation: Comparing Structures and Classes</a></p>
+<h5 id="declaration">Declaration</h5>
+<p>Both classes and structures are declared using the class and struct keywords, respectively. Both can have properties and methods defined within them.</p>
+<p>Here’s an example:</p>
+<pre><code class="language-swift">struct Resolution {
+    var width = 0
+    var height = 0
+}
+
+class VideoMode {
+    var resolution = Resolution()
+    var interlaced = false
+    var frameRate = 0.0
+    var name: String?
+}
+
+// create instances of structures and classes using initializer syntax:
+let someResolution = Resolution()
+let someVideoMode = VideoMode()
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/classesandstructures#Definition-Syntax">Swift Documentation: Definition Syntax</a></p>
+<p>When you assign an instance of a structure to a new variable or constant, or when you pass it to a function, the instance is copied.</p>
+<pre><code class="language-swift">struct Resolution {
+    var width = 0
+    var height = 0
+}
+
+let hd = Resolution(width: 1920, height: 1080)
+var cinema = hd
+
+cinema.width = 2048
+print(hd.width)
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/classesandstructures#Structures-and-Enumerations-Are-Value-Types">Swift Documentation: Structures and Enumerations Are Value Types</a></p>
+<p>When you assign an instance of a class to a new variable or constant, or when you pass it to a function, you are referencing the same instance.</p>
+<pre><code class="language-swift">struct Resolution {
+    var width = 0
+    var height = 0
+}
+
+class VideoMode {
+    var resolution = Resolution()
+    var interlaced = false
+    var frameRate = 0.0
+    var name: String?
+}
+
+let hd = Resolution(width: 1920, height: 1080)
+let tenEighty = VideoMode()
+tenEighty.resolution = hd
+tenEighty.interlaced = true
+tenEighty.name = &quot;1080i&quot;
+tenEighty.frameRate = 25.0
+
+let alsoTenEighty = tenEighty
+alsoTenEighty.frameRate = 30.0
+print(tenEighty.frameRate)
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/classesandstructures#Structures-and-Enumerations-Are-Value-Types">Swift Documentation: Structures and Enumerations Are Value Types</a></p>
+<p>Since classes are reference types, it is possible to check if two constants or variables refer to the same instance of a class using the identity operators (<code>===</code> and <code>!==</code>).</p>
+<pre><code class="language-swift">struct Resolution {
+    var width = 0
+    var height = 0
+}
+
+class VideoMode {
+    var resolution = Resolution()
+    var interlaced = false
+    var frameRate = 0.0
+    var name: String?
+}
+
+let hd = Resolution(width: 1920, height: 1080)
+let tenEighty = VideoMode()
+tenEighty.resolution = hd
+tenEighty.interlaced = true
+tenEighty.name = &quot;1080i&quot;
+tenEighty.frameRate = 25.0
+
+let alsoTenEighty = tenEighty
+alsoTenEighty.frameRate = 30.0
+
+if tenEighty === alsoTenEighty {
+    print(&quot;tenEighty and alsoTenEighty refer to the same VideoMode instance.&quot;)
+}
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/classesandstructures#Identity-Operators">Swift Documentation: Identity Operators</a></p>
+<h5 id="inheritance">Inheritance</h5>
+<p><em>Inheritance</em> is a mechanism in which one class (called a subclass) inherits the properties and methods of another class (called a superclass). In Swift, inheritance allows you to create a new class based on an existing class, thereby reusing code and adding new features to the existing class.</p>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/inheritance/">Swift Documentation: Inheritance</a></p>
+<p>A base class is any class that doesn’t inherit from another class.</p>
+<p><em>Subclassing</em> is the act of basing a new class on an existing class. The subclass inherits characteristics from the existing class, which you can then refine. You can also add new characteristics to the subclass. To create a subclass, you specify the subclass's name before the superclass's name, separated by a colon.</p>
+<p>The example below defines a base class called <em>Vehicle</em>. This base class defines a stored property called <code>currentSpeed</code>, with a default value of <code>0.0</code> (inferring a property type of <code>Double</code>). The <code>currentSpeed</code> property’s value is used by a read-only computed <code>String</code> property calle<code>description</code> to create a description of the vehicle. The <code>Vehicle</code> base class also defines a method called <code>makeNoise</code>. This method doesn’t actually do anything for a base <code>Vehicle</code> instance.</p>
+<p><code>Bicycle</code> is a subclass of <code>Vehicle</code>. It inherits all properties and methods from <code>Vehicle</code>, and also introduces a new property <code>hasBasket</code>.</p>
+<pre><code class="language-swift">class Vehicle {
+    var currentSpeed = 0.0
+    var description: String {
+        return &quot;traveling at \(currentSpeed) miles per hour&quot;
+    }
+    func makeNoise() {
+        // do nothing - an arbitrary vehicle doesn't necessarily make a noise
+    }
+}
+
+class Bicycle: Vehicle {
+    var hasBasket = false
+}
+
+let bicycle = Bicycle()
+print(bicycle.description)
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/inheritance#Defining-a-Base-Class">Swift Documentation: Defining a Base Class</a></p>
+<p>You can override an inherited instance or type method to provide a tailored or alternative implementation of the method within your subclass.</p>
+<p>The following example defines a new subclass of <code>Vehicle</code> called <code>Train</code>, which overrides the <code>makeNoise()</code> method that <code>Train</code> inherits from <code>Vehicle</code>:</p>
+<pre><code class="language-swift">class Vehicle {
+    var currentSpeed = 0.0
+    var description: String {
+        return &quot;traveling at \(currentSpeed) miles per hour&quot;
+    }
+    func makeNoise() {
+        // do nothing - an arbitrary vehicle doesn't necessarily make a noise
+    }
+}
+
+class Train: Vehicle {
+    override func makeNoise() {
+        print(&quot;Choo Choo&quot;)
+    }
+}
+
+let train = Train()
+print(train.makeNoise())
+</code></pre>
+<p>[Swift Documentation: Overriding Methods](https://docs.swift</p>
+<p>.org/swift-book/documentation/the-swift-programming-language/inheritance#Overriding-Methods)</p>
+<p>You can also override properties, including computed properties, to modify their behavior or provide custom getters and setters.</p>
+<p>Here, the <code>Car</code> class overrides the <code>description</code> property of its superclass <code>Vehicle</code> to add information about the car’s gear.</p>
+<pre><code class="language-swift">class Vehicle {
+    var currentSpeed = 0.0
+    var description: String {
+        return &quot;traveling at \(currentSpeed) miles per hour&quot;
+    }
+    func makeNoise() {
+        // do nothing - an arbitrary vehicle doesn't necessarily make a noise
+    }
+}
+
+class Car: Vehicle {
+    var gear = 1
+    override var description: String {
+        return super.description + &quot; in gear \(gear)&quot;
+    }
+}
+
+let car = Car()
+print(car.description)
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/inheritance#Overriding-Properties">Swift Documentation: Overriding Properties</a></p>
+<p>You can prevent a method, property, or subscript from being overridden by marking it as <code>final</code>. Do this by writing the <code>final</code> modifier before the method, property, or subscript’s introducer keyword (such as <code>final var</code>, <code>final func</code>, <code>final class func</code>, and <code>final subscript</code>).</p>
+<p>If you try to subclass <code>Train</code> or override its methods or properties, Swift will generate a compile-time error.</p>
+<pre><code class="language-swift">final class Train: Vehicle {
+    override func makeNoise() {
+        print(&quot;Choo Choo&quot;)
+    }
+}
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/inheritance#Preventing-Overrides">Swift Documentation: Preventing Overrides</a></p>
+<h5 id="protocols">Protocols</h5>
+<p>A <em>protocol</em> defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality. Classes, structures, and enumerations can adopt protocols and provide implementations for the requirements defined in those protocols.</p>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/protocols">Swift Documentation: Protocols</a></p>
+<p>In this example, <code>SomeProtocol</code> defines an instance property requirement (<code>mustBeSettable</code> and <code>doesNotNeedToBeSettable</code>), a type property requirement (<code>someTypeProperty</code>), an instance method requirement (<code>someMethod</code>), a mutating instance method requirement (<code>changeSomething</code>), and a type method requirement (<code>someTypeMethod</code>).</p>
+<pre><code class="language-swift">protocol SomeProtocol {
+    var mustBeSettable: Int { get set }
+    var doesNotNeedToBeSettable: Int { get }
+    static var someTypeProperty: Int { get set }
+
+    func someMethod()
+    mutating func changeSomething()
+    static func someTypeMethod()
+}
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/protocols">Swift Documentation: Defining Protocols</a></p>
+<p>A <code>protocol</code> can require any conforming type to provide an instance property or instance method with a particular name and type. The protocol does not specify whether the property should be a stored property or a computed property. It only specifies the required property name and type.</p>
+<pre><code class="language-swift">protocol FullyNamed {
+    var fullName: String { get }
+}
+
+struct Person: FullyNamed {
+    var fullName: String
+}
+
+let john = Person(fullName: &quot;John Appleseed&quot;)
+print(john.fullName)
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/protocols#Property-Requirements">Swift Documentation: Property Requirements</a></p>
+<p>A <code>protocol</code> can inherit one or more other protocols and can add further requirements on top of the requirements it inherits.</p>
+<pre><code class="language-swift">protocol InheritingProtocol: SomeProtocol, AnotherProtocol {
+    // additional requirements go here
+}
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/protocols#Protocol-Inheritance">Swift Documentation: Protocol Inheritance</a></p>
+<p>You can combine multiple protocols into a single requirement using a <code>protocol</code> composition.</p>
+<pre><code class="language-swift">protocol Named {
+    var name: String { get }
+}
+
+protocol Aged {
+    var age: Int { get }
+}
+
+struct Person: Named, Aged {
+    var name: String
+    var age: Int
+}
+
+func wishHappyBirthday(to celebrator: Named &amp; Aged) {
+    print(&quot;Happy birthday, \(celebrator.name), you're \(celebrator.age)!&quot;)
+}
+
+let birthdayPerson = Person(name: &quot;John&quot;, age: 21)
+wishHappyBirthday(to: birthdayPerson)
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/protocols#Protocol-Composition">Swift Documentation: Protocol Composition</a></p>
+<h5 id="extensions">Extensions</h5>
+<p><em>Extensions</em> add new functionality to an existing class, structure, enumeration, or protocol type. This includes the ability to extend types for which you do not have access to the original source code (known as retroactive modeling).</p>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/extensions">Swift Documentation: Extensions</a></p>
+<p>Declare extensions with the <code>extension</code> keyword:</p>
+<p>Extensions can add computed instance properties, computed type properties, and new methods to existing types.</p>
+<pre><code class="language-swift">extension Double {
+    var km: Double { return self * 1_000.0 }
+    var m: Double { return self }
+    var cm: Double { return self / 100.0 }
+    var mm: Double { return self / 1_000.0 }
+    var ft: Double { return self / 3.28084 }
+
+    func printCurrentValue() {
+        print(&quot;The current value is \(self)&quot;)
+    }
+}
+
+let number = 25.4
+print(&quot;One inch is \(number.mm) meters&quot;)
+number.printCurrentValue()
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/extensions#Extension-Syntax">Swift Documentation: Extension Syntax</a></p>
+<p>Instance methods added with an extension can also modify (or <em>mutate</em>) the instance itself. Structure and enumeration methods that modify <code>self</code> or its properties must mark the instance method as <code>mutating</code>, just like mutating methods from an original implementation.</p>
+<p>The example below adds a new mutating method called square to Swift’s Int type, which squares the original value:</p>
+<pre><code class="language-swift">extension Int {
+    mutating func square() {
+        self = self * self
+    }
+}
+
+var someInt = 3
+someInt.square()
+print(someInt)
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/extensions#Mutating-Instance-Methods">Swift Documentation: Mutating Instance Methods</a></p>
+<h4 id="module-8-error-handling">Module 8: Error Handling</h4>
+<h5 id="start_1">Start</h5>
+<p><em>Error handling</em> is the process of responding to and recovering from error conditions in your program. Swift provides first-class support for throwing, catching, propagating, and manipulating recoverable errors at runtime.</p>
+<p>Some operations aren’t guaranteed to always complete execution or produce a useful output. Optionals are used to represent the absence of a value, but when an operation fails, it’s often useful to understand what caused the failure, so that your code can respond accordingly.</p>
+<p>As an example, consider the task of reading and processing data from a file on disk. There are a number of ways this task can fail, including the file not existing at the specified path, the file not having read permissions, or the file not being encoded in a compatible format. Distinguishing among these different situations allows a program to resolve some errors and to communicate to the user any errors it can’t resolve.</p>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/errorhandling">Swift Documentation: Error Handling</a></p>
+<h5 id="representing-throwing-errors">Representing / Throwing Errors</h5>
+<p>In Swift, errors are represented by values of types that conform to the <code>Error</code> protocol. This empty protocol indicates that a type can be used for error handling.</p>
+<p>Swift enumerations are particularly well suited to modeling a group of related error conditions, with associated values allowing for additional information about the nature of an error to be communicated. For example, here’s how you might represent the error conditions of operating a vending machine inside a game:</p>
+<pre><code class="language-swift">enum VendingMachineError: Error {
+    case invalidSelection
+    case insufficientFunds(coinsNeeded: Int)
+    case outOfStock
+}
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/errorhandling#Representing-and-Throwing-Errors">Swift Documentation: Representing and Throwing Errors</a></p>
+<h5 id="handling-errors">Handling Errors</h5>
+<p>There are four ways to handle errors in Swift:</p>
+<ol>
+<li>
+<p>Propagating Errors Using <code>throws</code>
+   A function or method that can throw an error must be marked with the <code>throws</code> keyword. When calling this function, you must handle the error using a <code>try</code> keyword.</p>
+</li>
+<li>
+<p>Do-Catch
+   You can handle errors using a <code>do-catch</code> block. Inside the do block, you use try to call functions that can throw errors. In the catch blocks, you handle the errors.</p>
+</li>
+<li>
+<p>Optional Try?
+   You can convert an error to an optional value using <code>try?</code>. If an error is thrown, the expression evaluates to <code>nil</code>.</p>
+</li>
+<li>
+<p>Force Try!
+   You can disable error propagation using <code>try!</code>, which will cause a runtime error if an error is thrown.</p>
+</li>
+</ol>
+<p>Here are some examples:</p>
+<pre><code class="language-swift">enum DivisionError: Error {
+    case divisionByZero
+}
+
+// 1.
+func divide(_ numerator: Double, by denominator: Double) throws -&gt; Double {
+    if denominator == 0 {
+        throw DivisionError.divisionByZero
+    }
+    return numerator / denominator
+}
+
+// 2.
+do {
+    let result = try divide(10, by: 2)
+    print(&quot;Result: \(result)&quot;)  // This will print: Result: 5.0
+} catch DivisionError.divisionByZero {
+    print(&quot;Error:
+
+ Division by zero.&quot;)
+}
+
+// 3.
+if let result = try? divide(10, by: 2) {
+    print(&quot;Result: \(result)&quot;)  // This will print: Result: 5.0
+} else {
+    print(&quot;Error: Division by zero.&quot;)
+}
+
+// 4.
+let result = try! divide(10, by: 2)
+print(&quot;Result: \(result)&quot;)  // This will print: Result: 5.0
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/errorhandling#Propagating-Errors-Using-Throws">Swift Documentation: Propagating Errors Using Throws</a></p>
+<h3 id="level-advanced">Level Advanced</h3>
+<h4 id="module-9-functional-programming">Module 9: Functional Programming</h4>
+<h5 id="closures">Closures</h5>
+<p><em>Closures</em> are self-contained blocks of functionality that can be passed around and used in your code. Closures in Swift are similar to blocks in C and Objective-C and to lambdas in other programming languages. Closures can capture and store references to any constants and variables from the context in which they are defined. This is known as closing over those constants and variables.</p>
+<p>Here’s an example of a closure that captures values from its surrounding context:</p>
+<pre><code class="language-swift">let incrementByTwo = { (number: Int) -&gt; Int in
+    return number + 2
+}
+
+let result = incrementByTwo(3)
+print(result)  // This will print: 5
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/closures">Swift Documentation: Closures</a></p>
+<p>Swift provides several optimizations for closure expressions:</p>
+<ul>
+<li>Inferring Parameter and Return Types from Context</li>
+<li>Implicit Returns from Single-Expression Closures</li>
+<li>Shorthand Argument Names</li>
+<li>Trailing Closures</li>
+</ul>
+<p>Here’s an example of a shorthand closure expression:</p>
+<pre><code class="language-swift">let names = [&quot;Chris&quot;, &quot;Alex&quot;, &quot;Ewa&quot;, &quot;Barry&quot;, &quot;Daniella&quot;]
+
+let reversedNames = names.sorted(by: { $0 &gt; $1 })
+print(reversedNames)  // This will print: [&quot;Ewa&quot;, &quot;Daniella&quot;, &quot;Chris&quot;, &quot;Barry&quot;, &quot;Alex&quot;]
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/closures#Closure-Expression-Syntax">Swift Documentation: Closure Expression Syntax</a></p>
+<h5 id="generics">Generics</h5>
+<p><em>Generics</em> are a powerful feature of Swift that allow you to write flexible and reusable functions and types. Generic code enables you to write functions and types that can work with any type, subject to requirements that you define.</p>
+<p>Here’s a generic function that swaps the values of two variables:</p>
+<pre><code class="language-swift">func swapTwoValues&lt;T&gt;(_ a: inout T, _ b: inout T) {
+    let temporaryA = a
+    a = b
+    b = temporaryA
+}
+
+var a = 5
+var b = 10
+swapTwoValues(&amp;a, &amp;b)
+print(&quot;a is now \(a), and b is now \(b)&quot;)
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/generics">Swift Documentation: Generics</a></p>
+<h4 id="module-10-advanced-swift-lectures">Module 10: Advanced Swift-Lectures</h4>
+<h5 id="property-observers">Property Observers</h5>
+<p><em>Property observers</em> observe and respond to changes in a property’s value. Property observers are called every time a property’s value is set, even if the new value is the same as the property’s current value. You can add property observers to any stored properties you define, except for lazy stored properties. You can also add property observers to any inherited property (whether stored or computed) by overriding the property within a subclass.</p>
+<p>Here’s an example:</p>
+<pre><code class="language-swift">class StepCounter {
+    var totalSteps: Int = 0 {
+        willSet(newTotalSteps) {
+            print(&quot;About to set totalSteps to \(newTotalSteps)&quot;)
+        }
+        didSet {
+            if totalSteps &gt; oldValue {
+                print(&quot;Added \(totalSteps - oldValue) steps&quot;)
+            }
+        }
+    }
+}
+
+let stepCounter = StepCounter()
+stepCounter.totalSteps = 200
+stepCounter.totalSteps = 360
+stepCounter.totalSteps = 896
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties#Property-Observers">Swift Documentation: Property Observers</a></p>
+<h5 id="type-casting">Type Casting</h5>
+<p><em>Type casting</em> is a way to check the type of an instance, and/or to treat that instance as if it is a different superclass or subclass from somewhere else in its own class hierarchy.</p>
+<p>Type casting in Swift is implemented with the <code>is</code> and <code>as</code> operators. You can use these operators to check the type of a value or cast a value to a different type.</p>
+<p>Here’s an example:</p>
+<pre><code class="language-swift">class MediaItem {
+    var name: String
+    init(name: String) {
+        self.name = name
+    }
+}
+
+class Movie: MediaItem {
+    var director: String
+    init(name: String, director: String) {
+        self.director = director
+        super.init(name: name)
+    }
+}
+
+class Song: MediaItem {
+    var artist: String
+    init(name: String, artist: String) {
+        self.artist = artist
+        super.init(name: name)
+    }
+}
+
+let library = [
+    Movie(name: &quot;Casablanca&quot;, director: &quot;Michael Curtiz&quot;),
+    Song(name: &quot;Blue Suede Shoes&quot;, artist: &quot;Elvis Presley&quot;),
+    Movie(name: &quot;Citizen Kane&quot;, director: &quot;Orson Welles&quot;),
+    Song(name: &quot;The One And Only&quot;, artist: &quot;Chesney Hawkes&quot;),
+    Song(name: &quot;Never Gonna Give You Up&quot;, artist: &quot;Rick Astley&quot;)
+]
+
+var movieCount = 0
+var songCount = 0
+
+for item in library {
+    if item is Movie {
+        movieCount += 1
+    } else if item is Song {
+        songCount += 1
+    }
+}
+
+print(&quot;Media library contains \(movieCount) movies and \(songCount) songs&quot;)
+</code></pre>
+<p><a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/typecasting">Swift Documentation: Type Casting</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
