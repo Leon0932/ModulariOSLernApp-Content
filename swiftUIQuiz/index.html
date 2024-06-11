@@ -259,7 +259,7 @@
 </code></pre>
 <h5 id="quiz-2-bind-a-toggle-button">Quiz 2: Bind a Toggle Button</h5>
 <p><strong>Description</strong>: 
-1) Create a <code>ToggleButton</code> struct in SwiftUI that toggles between "Start" and "Stop" using a binding variable.
+1) Create a <code>ToggleButton</code> struct in SwiftUI that toggles between "Start" and "Stop" using a binding variable.<br>
 2) Then, create a <code>ControlView</code> struct that uses <code>ToggleButton</code> and binds its <code>isStarted</code> state.</p>
 <p><strong>Starting Code</strong>:</p>
 <pre><code class="language-swift">struct ToggleButton: View {
@@ -302,14 +302,12 @@ struct ControlView: View {
 <h4 id="module-13-components-in-swiftui">Module 13: Components in SwiftUI</h4>
 <h5 id="quiz-1-create-a-submit-button">Quiz 1: Create a Submit Button</h5>
 <p><strong>Description</strong>: 
-1) Create a <code>SubmitButtonView</code> struct in SwiftUI that displays a button with the title "Submit".
+1) Create a <code>SubmitButtonView</code> struct in SwiftUI that displays a button with the title "Submit".<br>
 2) The button should call a function <code>submit</code> when tapped.</p>
 <p><strong>Starting Code</strong>:</p>
 <pre><code class="language-swift">struct SubmitButtonView: View {
     var body: some View {
-        Button(action: submit) {
-            ...
-        }
+        ...
     }
 
     func submit() {
@@ -332,12 +330,12 @@ struct ControlView: View {
 </code></pre>
 <h5 id="quiz-2-create-an-update-button">Quiz 2: Create an Update Button</h5>
 <p><strong>Description</strong>: 
-1) Create a <code>UpdateButtonView</code> struct in SwiftUI that displays a button with the title "Update" and a prominent role.
+1) Create a <code>UpdateButtonView</code> struct in SwiftUI that displays a button with the title "Update" and a prominent role.<br>
 2) The button should call a function <code>update</code> when tapped.</p>
 <p><strong>Starting Code</strong>:</p>
 <pre><code class="language-swift">struct UpdateButtonView: View {
     var body: some View {
-        Button(&quot;Update&quot;, role: .prominent, action: update)
+        ...
     }
 
     func update() {
@@ -358,8 +356,8 @@ struct ControlView: View {
 </code></pre>
 <h5 id="quiz-3-create-an-email-textfield">Quiz 3: Create an Email TextField</h5>
 <p><strong>Description</strong>: 
-1) Create a <code>EmailTextFieldView</code> struct in SwiftUI that displays a text field with the placeholder "Email address" for entering an email.
-2) The text field should have a border of a secondary color, disable autocorrection, and use no text input autocapitalization.
+1) Create a <code>EmailTextFieldView</code> struct in SwiftUI that displays a text field with the placeholder "Email address" for entering an email.<br>
+2) The text field should have a border of a secondary color, disable autocorrection, and use no text input autocapitalization.<br>
 3) Below the text field, display the entered email in red text.</p>
 <p><strong>Starting Code</strong>:</p>
 <pre><code class="language-swift">struct EmailTextFieldView: View {
@@ -392,7 +390,7 @@ struct ControlView: View {
 </code></pre>
 <h5 id="quiz-4-create-a-volume-slider">Quiz 4: Create a Volume Slider</h5>
 <p><strong>Description</strong>: 
-1) Create a <code>VolumeSliderView</code> struct in SwiftUI that displays a slider for selecting a volume value between 0 and 100.
+1) Create a <code>VolumeSliderView</code> struct in SwiftUI that displays a slider for selecting a volume value between 0 and 100.<br>
 2) Below the slider, display the selected volume value in green text while editing and gray text otherwise.</p>
 <p><strong>Starting Code</strong>:</p>
 <pre><code class="language-swift">struct VolumeSliderView: View {
@@ -430,7 +428,7 @@ struct ControlView: View {
 <h4 id="module-14-navigation-and-views">Module 14: Navigation and Views</h4>
 <h5 id="quiz-1-create-a-food-navigation-stack">Quiz 1: Create a Food Navigation Stack</h5>
 <p><strong>Description</strong>: 
-1) Create a <code>FoodNavigationView</code> struct in SwiftUI that displays a list of food items using a <code>NavigationStack</code>.
+1) Create a <code>FoodNavigationView</code> struct in SwiftUI that displays a list of food items using a <code>NavigationStack</code>.<br>
 2) Each food item should be a navigation link that navigates to a new view displaying the selected food name.</p>
 <p><strong>Starting Code</strong>:</p>
 <pre><code class="language-swift">struct FoodNavigationView: View {
@@ -461,8 +459,8 @@ struct ControlView: View {
 </code></pre>
 <h5 id="quiz-2-create-a-category-tab-view">Quiz 2: Create a Category Tab View</h5>
 <p><strong>Description</strong>: 
-1) Create a <code>CategoryTabView</code> struct in SwiftUI that displays a <code>TabView</code> with two tabs.
-2) The first tab should display "Fruits" with a badge of "5" and an icon of an apple. 
+1) Create a <code>CategoryTabView</code> struct in SwiftUI that displays a <code>TabView</code> with two tabs.<br>
+2) The first tab should display "Fruits" with a badge of "5" and an icon of an apple.<br>
 3) The second tab should display "Vegetables" with a badge of "3" and an icon of a carrot.</p>
 <p><strong>Starting Code</strong>:</p>
 <pre><code class="language-swift">struct CategoryTabView: View {
