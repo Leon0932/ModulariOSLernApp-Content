@@ -54,8 +54,80 @@ struct TextView: View {
     }
 }
 ```
+##### VStack
 
-[SwiftUI Documentation](https://developer.apple.com/xcode/swiftui/)
+A view that arranges its subviews in a vertical line.
+
+The following example shows a simple vertical stack of 10 text views, with a spacing of 10 and an alignment of `leading`:
+
+```swift
+struct VStackView: View {
+    var body: some View {
+        VStack(
+                alignment: .leading,
+                spacing: 10
+            ) {
+                ForEach(
+                    1...10,
+                    id: \.self
+                ) {
+                    Text("Item \($0)")
+                }
+            }
+    }
+}
+```
+
+[SwiftUI VStack Documentation](https://developer.apple.com/documentation/swiftui/vstack)
+
+##### HStack
+
+A view that arranges its subviews in a horizontal line.
+
+The following example shows a simple horizontal stack of five text views, with a spacing of 5 and an alignment of `top`:
+
+```swift
+struct HStackView: View {
+    var body: some View {
+        HStack(
+                alignment: .top,
+                spacing: 10
+            ) {
+                ForEach(
+                    1...5,
+                    id: \.self
+                ) {
+                    Text("Item \($0)")
+                }
+            }
+    }
+}
+```
+
+[SwiftUI HStack Documentation](https://developer.apple.com/documentation/swiftui/hstack)
+
+##### ZStack
+
+The `ZStack` assigns each successive subview a higher z-axis value than the one before it, meaning later subviews appear “on top” of earlier ones.
+
+The following example uses a `ZStack` to overlay a white "Center" text on top of a blue circle with a width and height of 100 points:
+
+```swift
+struct ZStackView: View {
+    var body: some View {
+        ZStack {
+            Circle()
+                .fill(Color.blue)
+                .frame(width: 100, height: 100)
+            Text("Center")
+                .foregroundColor(.white)
+        }
+    }
+}
+```
+
+[SwiftUI ZStack Documentation](https://developer.apple.com/documentation/swiftui/zstack)
+
 
 #### Module 12: State Management in SwiftUI
 
@@ -89,7 +161,8 @@ The parent view declares a property to hold the playing state, using the `State`
 
 ```swift
 struct PlayButton: View {
-    @Binding private var isPlaying: Bool
+    @Binding var isPlaying: Bool
+
 
     var body: some View {
         Button(isPlaying ? "Pause" : "Play") {
@@ -99,12 +172,12 @@ struct PlayButton: View {
 }
 
 struct PlayerView: View {
-    var episode: Episode
-    @State private var isPlaying: Bool = false
+    @State var isPlaying: Bool = false
+
 
     var body: some View {
         VStack {
-            Text(episode.title)
+            Text("New episode")
                 .foregroundStyle(isPlaying ? .primary : .secondary)
             PlayButton(isPlaying: $isPlaying)
         }
@@ -174,7 +247,7 @@ struct MySubView: View {
     @ObservedObject var model: DataModel
 
     var body: some View {
-        Toggle("Enabled", isOn: $model.isEnabled)
+        Toggle(model.isEnabled ? "Enabled" : "Disabled", isOn: $model.isEnabled)
     }
 }
 ```
@@ -209,7 +282,7 @@ struct MySubView: View {
     @EnvironmentObject var model: DataModel
 
     var body: some View {
-        Toggle("Enabled", isOn: $model.isEnabled)
+        Toggle(model.isEnabled ? "Enabled" : "Disabled", isOn: $model.isEnabled)
     }
 }
 ```
@@ -237,7 +310,7 @@ struct ButtonView: View {
         }
     }
 
-    func signIn {
+    func signIn() {
         // do something
     }
 }
@@ -257,7 +330,7 @@ struct ButtonView: View {
         Button("Delete", role: .destructive, action: delete)
     }
 
-    func delete {
+    func delete() {
         // do something
     }
 }
@@ -276,7 +349,7 @@ struct ButtonView: View {
             .buttonStyle(.bordered)
     }
 
-    func signIn {
+    func signIn() {
         // do something
     }
 }
@@ -400,7 +473,7 @@ struct NavigationExampleView: View {
 
     var body: some View {
         NavigationStack {
-            List(names) { name in
+            List(names, id: \.self) { name in
                 NavigationLink(name, value: name)
             }
             .navigationDestination(for: String.self) { name in
@@ -446,7 +519,7 @@ struct TabViewExample: View {
 
 #### Module 15: Advanced SwiftUI-Lectures
 
-##### Rotation Effect
+##### Rotation Effects
 
 Rotates a view’s rendered output in two dimensions around the specified point.
 
@@ -459,7 +532,7 @@ struct BasicAnimationView: View {
     var body: some View {
         Image(systemName: "arrow.right.circle.fill")
             .rotationEffect(.degrees(isRotated ? 90 : 0))
-            .animation(.easeInOut(duration: 1))
+            .animation(.easeInOut, value: 1)
             .onTapGesture {
                 isRotated.toggle()
             }
@@ -483,7 +556,7 @@ struct AnimationView: View {
         VStack {
             Image(systemName: "star.fill")
                 .scaleEffect(scale)
-                .animation(.easeInOut(duration: 1))
+                .animation(.easeInOut, value: 1)
             Button("Animate") {
                 scale += 0.5
             }
