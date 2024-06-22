@@ -49,6 +49,9 @@
                             <li class="nav-item">
                                 <a href="./" class="nav-link active" aria-current="page">SwiftUI-Quizzes</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="../swiftUITests/" class="nav-link">SwiftUI-Playground Tests</a>
+                            </li>
                         </ul>
 
                     <ul class="nav navbar-nav ms-md-auto">
@@ -63,7 +66,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
+                                <a rel="next" href="../swiftUITests/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -372,9 +375,7 @@ struct ControlView: View {
 </code></pre>
 <p><strong>Solution Code</strong>:</p>
 <pre><code class="language-swift">struct EmailTextFieldView: View {
-    @State private var email: String =
-
- &quot;&quot;
+    @State private var email: String = &quot;&quot;
 
     var body: some View {
         VStack {
