@@ -160,7 +160,62 @@
     }
 }
 </code></pre>
-<p><a href="https://developer.apple.com/xcode/swiftui/">SwiftUI Documentation</a></p>
+<h5 id="vstack">VStack</h5>
+<p>A view that arranges its subviews in a vertical line.</p>
+<p>The following example shows a simple vertical stack of 10 text views, with a spacing of 10 and an alignment of <code>leading</code>:</p>
+<pre><code class="language-swift">struct VStackView: View {
+    var body: some View {
+        VStack(
+                alignment: .leading,
+                spacing: 10
+            ) {
+                ForEach(
+                    1...10,
+                    id: \.self
+                ) {
+                    Text(&quot;Item \($0)&quot;)
+                }
+            }
+    }
+}
+</code></pre>
+<p><a href="https://developer.apple.com/documentation/swiftui/vstack">SwiftUI VStack Documentation</a></p>
+<h5 id="hstack">HStack</h5>
+<p>A view that arranges its subviews in a horizontal line.</p>
+<p>The following example shows a simple horizontal stack of five text views, with a spacing of 5 and an alignment of <code>top</code>:</p>
+<pre><code class="language-swift">struct HStackView: View {
+    var body: some View {
+        HStack(
+                alignment: .top,
+                spacing: 10
+            ) {
+                ForEach(
+                    1...5,
+                    id: \.self
+                ) {
+                    Text(&quot;Item \($0)&quot;)
+                }
+            }
+    }
+}
+</code></pre>
+<p><a href="https://developer.apple.com/documentation/swiftui/hstack">SwiftUI HStack Documentation</a></p>
+<h5 id="zstack">ZStack</h5>
+<p>The <code>ZStack</code> assigns each successive subview a higher z-axis value than the one before it, meaning later subviews appear “on top” of earlier ones.</p>
+<p>The following example uses a <code>ZStack</code> to overlay a white "Center" text on top of a blue circle with a width and height of 100 points:</p>
+<pre><code class="language-swift">struct ZStackView: View {
+    var body: some View {
+        ZStack {
+            Circle()
+                .fill(Color.blue)
+                .frame(width: 100, height: 100)
+            Text(&quot;Center&quot;)
+                .foregroundColor(.white)
+        }
+    }
+}
+</code></pre>
+<p><a href="https://developer.apple.com/documentation/swiftui/zstack">SwiftUI ZStack Documentation</a></p>
 <h4 id="module-12-state-management-in-swiftui">Module 12: State Management in SwiftUI</h4>
 <h5 id="state">State</h5>
 <p>A property wrapper type that can read and write a value managed by SwiftUI.</p>
@@ -181,7 +236,8 @@
 <p>Use a binding to create a two-way connection between a property that stores data, and a view that displays and changes the data. A binding connects a property to a source of truth stored elsewhere, instead of storing data directly. For example, a button that toggles between play and pause can create a binding to a property of its parent view using the <code>Binding</code> property wrapper.</p>
 <p>The parent view declares a property to hold the playing state, using the <code>State</code> property wrapper to indicate that this property is the value’s source of truth:</p>
 <pre><code class="language-swift">struct PlayButton: View {
-    @Binding private var isPlaying: Bool
+    @Binding var isPlaying: Bool
+
 
     var body: some View {
         Button(isPlaying ? &quot;Pause&quot; : &quot;Play&quot;) {
@@ -191,12 +247,12 @@
 }
 
 struct PlayerView: View {
-    var episode: Episode
-    @State private var isPlaying: Bool = false
+    @State var isPlaying: Bool = false
+
 
     var body: some View {
         VStack {
-            Text(episode.title)
+            Text(&quot;New episode&quot;)
                 .foregroundStyle(isPlaying ? .primary : .secondary)
             PlayButton(isPlaying: $isPlaying)
         }
@@ -252,7 +308,7 @@ struct MySubView: View {
     @ObservedObject var model: DataModel
 
     var body: some View {
-        Toggle(&quot;Enabled&quot;, isOn: $model.isEnabled)
+        Toggle(model.isEnabled ? &quot;Enabled&quot; : &quot;Disabled&quot;, isOn: $model.isEnabled)
     }
 }
 </code></pre>
@@ -280,7 +336,7 @@ struct MySubView: View {
     @EnvironmentObject var model: DataModel
 
     var body: some View {
-        Toggle(&quot;Enabled&quot;, isOn: $model.isEnabled)
+        Toggle(model.isEnabled ? &quot;Enabled&quot; : &quot;Disabled&quot;, isOn: $model.isEnabled)
     }
 }
 </code></pre>
@@ -300,7 +356,7 @@ struct MySubView: View {
         }
     }
 
-    func signIn {
+    func signIn() {
         // do something
     }
 }
@@ -314,7 +370,7 @@ struct MySubView: View {
         Button(&quot;Delete&quot;, role: .destructive, action: delete)
     }
 
-    func delete {
+    func delete() {
         // do something
     }
 }
@@ -328,7 +384,7 @@ struct MySubView: View {
             .buttonStyle(.bordered)
     }
 
-    func signIn {
+    func signIn() {
         // do something
     }
 }
@@ -418,7 +474,7 @@ struct MySubView: View {
 
     var body: some View {
         NavigationStack {
-            List(names) { name in
+            List(names, id: \.self) { name in
                 NavigationLink(name, value: name)
             }
             .navigationDestination(for: String.self) { name in
@@ -454,7 +510,7 @@ struct MySubView: View {
 <p><a href="https://developer.apple.com/documentation/swiftui/tabview">TabView Documentation</a></p>
 <h3 id="level-advanced">Level Advanced</h3>
 <h4 id="module-15-advanced-swiftui-lectures">Module 15: Advanced SwiftUI-Lectures</h4>
-<h5 id="rotation-effect">Rotation Effect</h5>
+<h5 id="rotation-effects">Rotation Effects</h5>
 <p>Rotates a view’s rendered output in two dimensions around the specified point.</p>
 <p>This example defines a view that includes a state variable <code>isRotated</code> initialized to <code>false</code> to control the rotation of an arrow image. The view contains an <code>Image</code> that rotates 90 degrees when <code>isRotated</code> is <code>true</code>, with an ease-in-out animation of 1 second. Tapping the image toggles the rotation state:</p>
 <pre><code class="language-swift">struct BasicAnimationView: View {
@@ -463,7 +519,7 @@ struct MySubView: View {
     var body: some View {
         Image(systemName: &quot;arrow.right.circle.fill&quot;)
             .rotationEffect(.degrees(isRotated ? 90 : 0))
-            .animation(.easeInOut(duration: 1))
+            .animation(.easeInOut, value: 1)
             .onTapGesture {
                 isRotated.toggle()
             }
@@ -481,7 +537,7 @@ struct MySubView: View {
         VStack {
             Image(systemName: &quot;star.fill&quot;)
                 .scaleEffect(scale)
-                .animation(.easeInOut(duration: 1))
+                .animation(.easeInOut, value: 1)
             Button(&quot;Animate&quot;) {
                 scale += 0.5
             }
