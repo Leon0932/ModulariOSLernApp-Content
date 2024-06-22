@@ -314,9 +314,7 @@ struct EmailTextFieldView: View {
 **Solution Code**:
 ```swift
 struct EmailTextFieldView: View {
-    @State private var email: String =
-
- ""
+    @State private var email: String = ""
 
     var body: some View {
         VStack {

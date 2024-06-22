@@ -5,3 +5,4 @@ nav:
   - SwiftUI: swiftUI.md
   - Swift-Quizzes: swiftQuiz.md
   - SwiftUI-Quizzes: swiftUIQuiz.md
+  - SwiftUI-Playground Tests: swiftUITests.md
