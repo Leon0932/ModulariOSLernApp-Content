@@ -1,4 +1,4 @@
-# Projektarbeit MD
+# ModulariOSLernApp-Content
 
 This repository contains the module contents and additional resources for the app 'ModulariOSLernApp-Projektarbeit' using MKDocs.
 
